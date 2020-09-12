@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "..\\PAGE BOOTSTRAP"
+		},
+		{
+			"path": "..\\SITIO WEB CLASES DW"
+		},
+		{
+			"path": "..\\SITIO WEB CLASES RENOV"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PAGE BOOTSTRAP"
+	}
+}

@@ -1,0 +1,205 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("../img/flore_rosas.jpg");
+    background-repeat: repeat;
+    background-color: #cccccc;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    background: #b34372;
+    height: 80px;
+    width:100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight:bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    background: #b34372;
+    border-radius: 3px;
+
+}
+
+nav ul li a{
+    color:white;
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    background: #ffa43e;
+    transition: .5s;
+}
+
+p{
+    text-align: justify;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido sidebar"
+						 "widget-1 widget-2 sidebar"
+						 "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+	background: #fff;
+	padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.contenedor .header {
+	background:#a10f3f;
+	color: #fcfcfc;
+    grid-area: header;
+    
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    background:#dddac9;
+    text-align: left;
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #ffa43e;
+	text-align: justify;
+	display: in-line;
+	align-items: flex-start;
+	justify-content: center;
+	min-height: 100px;
+    grid-area: sidebar;
+    color: #573d1c;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+	background: #f9025a;
+	color: #fff;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .widget-1 {
+	grid-area: widget-1;
+}
+
+
+
+.contenedor .widget-2 {
+	grid-area: widget-2;
+}
+
+.contenedor .footer {
+	background: #a10f3f;
+	color: #fff;
+    grid-area: footer;
+    text-align: center;
+    
+}
+
+.formulario{
+    width: 50%;
+	text-align: left;
+    display: inline-block;
+    align-items: center;
+    min-height: 20px;
+    max-width: 100px;
+}
+
+.formulario_registro{
+    width: 50%;
+	text-align: left;
+    display: inline-block;
+    align-items: stretch;
+    min-height: 20px;
+    max-width: 100px;
+    color: rgb(114, 11, 63);
+}
+
+.formulario_registro input{
+    border: 2px solid #e27347;
+    border-radius: 8px;
+}
+
+.logo_flor{
+    width: 5%;
+    height: 5%;
+}
+
+.subir {
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    color: white;
+    background-color: #914907;
+    border: 2px solid #db9730;
+}
+
+.limpiar{
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    color: white;
+    background-color: #914907;
+    border: 2px solid #db9730;
+}
+
+.limpiar:hover{
+    background-color: #9c1765; /* Green */
+    color: white;
+  }
+
+.subir:hover{
+    background-color: #9c1765; /* Green */
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "widget-1 widget-1 widget-2"
+						 "footer footer footer";
+	}
+}
